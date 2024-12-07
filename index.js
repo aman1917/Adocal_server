@@ -23,7 +23,7 @@ mongoose
   .then(() => {
     console.log("Mongoose connected");
     app.listen(PORT, () => {
-      console.log(`Adocal is running on http://localhost:${PORT}`);
+      console.log(`Adocal is running on ${PORT}`);
     });
   })
   .catch(() => {
