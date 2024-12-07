@@ -4,7 +4,7 @@ const cors = require('cors');
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 const mongoURI = process.env.MONGO_URI;
 
 // Correct CORS setup
@@ -21,8 +21,8 @@ mongoose
   .connect(mongoURI)
   .then(() => {
     console.log("Mongoose connected");
-    app.listen(PORT, () => {
-      console.log(`Adocal is running on ${PORT}`);
+    app.listen(port, () => {
+      console.log(`Adocal is running on ${port}`);
     });
   })
   .catch(() => {
